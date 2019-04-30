@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+    <pattern>hola</pattern>
+    <template>Buenos dias! Como te llamas?</template>
+</category>
+<category>
+    <pattern>donde juega  *</pattern>
+    <template>
+    <think><set name="el"><star/></set></think>
+    Aqui hay alguna información sobre donde juega <star/>
+    <button>
+        <text>Clik aqui</text>
+        <url>https://es.wikipedia.org/wiki/campo de futbol <star/></url>
+    </button>
+    </template>
+</category>
+<category>
+    <pattern>Donde juega el</pattern>
+    <template>
+        <condition name="el">
+            <li value="*"><srai>Donde juega <get name="el"/></srai></li>
+        </condition>
+    </template>
+</category>
+<category>
+	<pattern>Me llamo *</pattern>
+	<template>Encantado <star/>.</template>
+</category>
+<category>
+    <pattern>quieres hablar de algo</pattern>
+    <template>Me encanta el futbol, hablemos de futbol</template>
+</category>
+<category>
+    <pattern>que equipo ha ganado la liga</pattern>
+    <template>La liga la ha ganado el barcelona</template>
+</category>
+<category>
+    <pattern>Hablame de el</pattern>
+    <template>
+    Aqui hay alguna información sobre FC Barcelona 
+    <button>
+        <text>Clik aqui</text>
+        <url>https://es.wikipedia.org/wiki/FC Barcelona</url>
+    </button>
+    . quieres saber algo de otro equipo?
+    </template>
+</category>
+<category>
+    <pattern>cuentame algo sobre  *</pattern>
+    <template>
+    <think><set name="el"><star/></set></think>
+    Aqui hay alguna información sobre <star/>
+    <button>
+        <text>Clik aqui</text>
+        <url>https://es.wikipedia.org/wiki/<star/></url>
+    </button>
+    </template>
+</category>
+<category>
+    <pattern>A ti te gusta el futbol</pattern>
+    <template>Me gustan mas los videojuegos</template>
+</category>
+<category>
+    <pattern>Como cual</pattern>
+    <template>El que mas me gusta es el Mario Bross</template>
+</category>
+<category>
+    <pattern>Me voy a ver un partido</pattern>
+    <template>Encantado, yo a jugar a un videiojuego</template>
+</category>
+</aiml>
